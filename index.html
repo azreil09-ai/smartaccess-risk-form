@@ -161,18 +161,6 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
 .chk-text{font-size:13px;color:var(--text);font-weight:500;line-height:1.4;text-align:right;flex:1}
 .chk-item.done .chk-text{color:var(--text-faint);text-decoration:line-through}
 
-/* ── TEAM ── */
-.add-team-btn{display:flex;align-items:center;gap:10px;padding:13px 15px;margin-top:11px;border:1.5px dashed var(--border);border-radius:9px;cursor:pointer;color:var(--text-soft);font-size:13px;font-weight:500;transition:all var(--tr);background:transparent;width:100%;text-align:right;font-family:'Heebo',sans-serif}
-.add-team-btn:hover{border-color:var(--blue);color:var(--blue);background:rgba(42,92,170,.04)}
-.add-ic{width:26px;height:26px;border-radius:7px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
-.tc{margin-right:auto;font-size:11px;background:var(--surface2);padding:2px 10px;border-radius:20px;color:var(--text-soft);border:1px solid var(--border)}
-.member-card{display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:9px;background:var(--surface2);border:1px solid var(--border-light);margin-top:8px}
-.av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;box-shadow:0 2px 6px rgba(42,92,170,.25)}
-.minfo{flex:1}
-.mname{font-size:13px;font-weight:700;color:var(--navy);text-align:right}
-.mmeta{font-size:11px;color:var(--text-soft);margin-top:1px;text-align:right}
-.rm-btn{padding:5px 10px;border:1px solid var(--border);border-radius:7px;background:#fff;color:var(--text-soft);font-size:11px;cursor:pointer;font-family:'Heebo',sans-serif;transition:all var(--tr)}
-
 /* ── EMERGENCY ── */
 .cc{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:9px;background:var(--surface2);border:1px solid var(--border-light);margin-top:8px}
 .cicon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
@@ -196,7 +184,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
 .share-btn-icon{font-size:19px;flex-shrink:0}
 .share-lbl{font-size:11px;opacity:.6;font-weight:400;margin-top:1px}
 
-/* ── SMARTACCESS FOOTER ── */
+/* ── FOOTER ── */
 .sa-footer{text-align:center;padding:28px 20px 8px;color:var(--text-faint)}
 .sa-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin-bottom:20px}
 .sa-logo-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
@@ -227,6 +215,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
 <body>
 <div class="page" dir="rtl" id="pdf-content">
 
+<!-- HEADER -->
 <div class="hdr">
   <div class="hdr-inner">
     <div class="hdr-top">
@@ -251,6 +240,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 1 -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s1')">
     <div class="sec-title-row"><div class="sec-num">1</div><div><div class="sec-label">פרטים כלליים</div><div class="sec-sub">General Information</div></div></div>
@@ -307,6 +297,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 2 -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s2')">
     <div class="sec-title-row"><div class="sec-num">2</div><div><div class="sec-label">תיאור המשימה</div><div class="sec-sub">Mission Description</div></div></div>
@@ -318,6 +309,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 3 (TEAM) -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s3')">
     <div class="sec-title-row"><div class="sec-num">3</div><div><div class="sec-label">כוח אדם</div><div class="sec-sub">Team Members</div></div></div>
@@ -328,6 +320,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 4 (RISK) -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s4')">
     <div class="sec-title-row"><div class="sec-num">4</div><div><div class="sec-label">הערכת סיכונים</div><div class="sec-sub">Risk Assessment</div></div></div>
@@ -348,6 +341,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 5 (CHECKLIST) -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s5')">
     <div class="sec-title-row"><div class="sec-num">5</div><div><div class="sec-label">יומן בדיקות</div><div class="sec-sub">Checklist</div></div></div>
@@ -362,6 +356,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 6 (EMERGENCY) -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s6')">
     <div class="sec-title-row"><div class="sec-num">6</div><div><div class="sec-label">חירום</div><div class="sec-sub">Emergency</div></div></div>
@@ -374,6 +369,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SECTION 7 (SIGNATURE) -->
 <div class="sec">
   <div class="sec-hdr" onclick="tog('s7')">
     <div class="sec-title-row"><div class="sec-num">7</div><div><div class="sec-label">אישור וחתימה</div><div class="sec-sub">Authorization</div></div></div>
@@ -395,16 +391,18 @@ textarea{resize:vertical;min-height:90px;line-height:1.65}
   </div>
 </div>
 
+<!-- SHARE PANEL -->
 <div class="share-panel">
   <div class="share-title">סיום ושמירה</div>
   <div class="share-grid">
     <button class="share-btn" id="btn-pdf" onclick="generatePDF()" type="button">
-      <span class="share-btn-icon">📄</span>
-      <div><div>הורד PDF</div><div class="share-lbl">הפקה מקומית (ללא שרת)</div></div>
+      <span class="share-btn-icon">📤</span>
+      <div><div>הפק ושתף PDF</div><div class="share-lbl">שיתוף לוואטסאפ או שמירה בטלפון</div></div>
     </button>
   </div>
 </div>
 
+<!-- FOOTER -->
 <div class="sa-footer">
   <div class="sa-divider"></div>
   <div class="sa-logo-row">
@@ -499,28 +497,50 @@ canvas.addEventListener('mousedown', startDraw); canvas.addEventListener('mousem
 canvas.addEventListener('touchstart', startDraw, {passive: false}); canvas.addEventListener('touchmove', draw, {passive: false}); window.addEventListener('touchend', endDraw);
 function clearSig() { ctx.clearRect(0, 0, canvas.width, canvas.height); document.getElementById('sig-ph').style.display = 'block'; }
 
-// --- PDF ---
-function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+// --- הזרקת קוד השיתוף (WEB SHARE API) להורדת ה-PDF ---
+function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
 
 function generatePDF() {
     let btn = document.getElementById('btn-pdf');
     btn.disabled = true; btn.style.opacity = '0.6';
-    toast('⏳ מכין PDF...');
+    toast('⏳ מכין את המסמך... אנא המתן מעט.');
 
     document.querySelectorAll('.sec-body').forEach(b => b.style.display = 'block');
     document.querySelectorAll('.chev').forEach(c => c.classList.add('open'));
 
     let opt = {
         margin: [10,10,10,10],
-        filename: 'ניהול_סיכונים.pdf',
+        filename: 'טופס_ניהול_סיכונים_יומי.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf().set(opt).from(document.getElementById('pdf-content')).save().then(() => {
-        toast('✓ מסמך ה-PDF הורד בהצלחה!');
-        btn.disabled = false; btn.style.opacity = '1';
+    html2pdf().set(opt).from(document.getElementById('pdf-content')).output('blob').then(function(pdfBlob) {
+        const file = new File([pdfBlob], opt.filename, { type: 'application/pdf' });
+
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            navigator.share({
+                title: 'טופס ניהול סיכונים',
+                text: 'מצורף טופס ניהול סיכונים חתום מעבודת הגלישה.',
+                files: [file]
+            }).then(() => {
+                toast('✓ המסמך הופק ושותף בהצלחה!');
+                btn.disabled = false; btn.style.opacity = '1';
+            }).catch((err) => {
+                console.log('שיתוף בוטל', err);
+                btn.disabled = false; btn.style.opacity = '1';
+            });
+        } else {
+            let url = URL.createObjectURL(pdfBlob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = opt.filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            toast('✓ המסמך הורד בהצלחה למכשיר!');
+            btn.disabled = false; btn.style.opacity = '1';
+        }
     }).catch(err => {
         console.error(err); toast('❌ שגיאה בהפקה');
         btn.disabled = false; btn.style.opacity = '1';
