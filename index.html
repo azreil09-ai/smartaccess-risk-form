@@ -484,7 +484,7 @@ function tick(k){
   document.getElementById('prog-cnt').textContent=done+' / '+total;
 }
 
-// --- חתימה ---
+// --- חתימה (התיקון שהחזיר את הלחיצות לאנדרואיד) ---
 const canvas = document.getElementById('sig-canvas'), ctx = canvas.getContext('2d');
 let drawing = false;
 function resizeCanvas() { canvas.width = canvas.parentElement.clientWidth; canvas.height = 145; ctx.lineWidth = 2.5; ctx.lineCap = 'round'; ctx.strokeStyle = '#0f1c35'; }
@@ -492,12 +492,15 @@ window.addEventListener('resize', resizeCanvas); setTimeout(resizeCanvas, 100);
 function getPos(e) { let r = canvas.getBoundingClientRect(), evt = e.touches ? e.touches[0] : e; return { x: evt.clientX - r.left, y: evt.clientY - r.top }; }
 function startDraw(e) { e.preventDefault(); drawing = true; let p = getPos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sig-ph').style.display = 'none'; }
 function draw(e) { if (!drawing) return; e.preventDefault(); let p = getPos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); }
-function endDraw(e) { e.preventDefault(); drawing = false; }
+
+// הנה התיקון: הסרנו מפה את ה- e.preventDefault() שחסם את כל המסך!
+function endDraw(e) { drawing = false; }
+
 canvas.addEventListener('mousedown', startDraw); canvas.addEventListener('mousemove', draw); window.addEventListener('mouseup', endDraw);
 canvas.addEventListener('touchstart', startDraw, {passive: false}); canvas.addEventListener('touchmove', draw, {passive: false}); window.addEventListener('touchend', endDraw);
 function clearSig() { ctx.clearRect(0, 0, canvas.width, canvas.height); document.getElementById('sig-ph').style.display = 'block'; }
 
-// --- הזרקת קוד השיתוף (WEB SHARE API) להורדת ה-PDF ---
+// --- הפקת ה-PDF ושיתוף ישיר (וואטסאפ/שמירה) ---
 function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
 
 function generatePDF() {
